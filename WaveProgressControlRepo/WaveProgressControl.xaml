@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="WaveProgressControlRepo.WaveProgressControl"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d"
+             Height="160"
+             Width="160">
+
+	<Grid x:Name="Root">
+		<Ellipse x:Name="ClippedImageContainer"
+		         Fill="White"
+		         Margin="6" />
+		<Ellipse x:Name="CircleBorder"
+		         Stroke="#FF0289CD"
+		         StrokeThickness="3" />
+		<TextBlock Foreground="#FF0289CD"
+		           FontSize="36"
+		           FontWeight="SemiBold"
+		           TextAlignment="Right"
+		           VerticalAlignment="Center"
+		           Width="83"
+		           Margin="0,0,12,0">
+			<Run Text="{x:Bind Percent, Mode=OneWay}" />
+			<Run Text="%"
+			     FontSize="22" />
+		</TextBlock>
+	</Grid>
+</UserControl>
